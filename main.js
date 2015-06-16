@@ -36,19 +36,23 @@ $('document').ready(function(){
 
         submitHandler: function(form){
 
+          // cross origin problem cause success callback not execute, so implement the same function in both callbacks
           $(form).ajaxSubmit({
             target: '#preview',
-            success: function() {
-              $('#entry_1673767957').val('');
-              $('#entry_522036821').val('');
-              $('#entry_1025000276').val('');
-              // $('.form-messages').html('success!!!!');
-              // mensaje de exito
-              swal('Good job!', 'You clicked the button!', 'success');
-            }
+            success: emptyFieldsAndShowMessage,
+            error: emptyFieldsAndShowMessage
           });
         }
 
     });
 
 });
+
+function emptyFieldsAndShowMessage() {
+  $('#entry_1673767957').val('');
+  $('#entry_522036821').val('');
+  $('#entry_1025000276').val('');
+  // $('.form-messages').html('success!!!!');
+  // mensaje de exito
+  swal('Good job!', 'You clicked the button!', 'success');
+}
