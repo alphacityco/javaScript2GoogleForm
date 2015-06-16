@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact with Validation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/jquery.form.js"></script>
+        <script type="text/javascript" src="js/sweetalert.js"></script>
+
+        <script type="text/javascript" src="main.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <style type="text/css">
+    ul
+            {
+                list-style:none;
+                width:100%;
+                margin: 0;
+                padding: 0;
+            }
+            ul li
+            {
+                padding-top:5px;
+                padding-bottom:5px;
+                margin-bottom:10px;
+                clear:left;
+                position: relative;
+
+            }
+            ul li label
+            {
+                width:20%;
+                display: block;
+                margin-right:2%;
+                text-align:left;
+                line-height:22px;
+            }
+            ul li span.error
+            {
+                font: 11px arial;
+                color:red;
+                margin-left:8px;
+                line-height:22px;
+            }
+            ul li span.passerror
+            {
+                display: block;
+                font: 11px arial;
+                color:red;
+                margin-left:8px;
+                line-height:22px;
+            }
+            ul li .shortfield{
+                width: 45px;
+            }
+
+     </style>
+    </head>
+    <body>
+       <div id="preview"></div>
+        <div id="formbox">
+            <form name="form" id="form" action="https://docs.google.com/forms/d/1QSXpZA054pANflVKOKiKWcZVdQRy3ht7OFD_DMPjXFU/formResponse" method="post">
+                <ul id="ngothastyle3">
+                    <li class="form-messages"></li>
+                    <li>
+                        <label>Name</label>
+                        <input type="text" name="entry.1673767957" id="entry_1673767957" class="" maxlength="40" />
+            <!-- <input type="text" name="entry.1673767957" value="" class="ss-q-short" id="entry_1673767957" dir="auto" aria-label="Nombre  " title="">-->
+                    </li>
+                    <li>
+                        <label>Email</label>
+                        <input type="text" name="entry.522036821" id="entry_522036821" class="" maxlength="100" />
+            <!-- <input type="text" name="entry.522036821" value="" class="ss-q-short" id="entry_522036821" dir="auto" aria-label="correo email " title="">-->
+                    </li>
+                    <li>
+                        <label>Message</label>
+                        <textarea name="entry.1025000276" id="entry_1025000276" rows="5" cols="45" class=""></textarea>
+            <!--<textarea name="entry.1025000276" rows="8" cols="0" class="ss-q-long" id="entry_1025000276" dir="auto" aria-label="mensaje  "></textarea>-->
+                    </li>
+                    <li>
+                        <label>&nbsp;</label>
+                        <input type="submit" name="submit" value="Submit">
+            <!--<input type="submit" name="submit" value="Enviar" id="ss-submit" class="jfk-button jfk-button-action ">-->
+                    </li>
+                </ul>
+            </form>            </div>
+    </body>
+</html>
