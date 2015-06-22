@@ -45,10 +45,14 @@ $('document').ready(function(){
 
           $.ajax({
             type: 'POST',
-            url: '/api' // endpoint url where reside email sending
-          }).then(function(data) {
-            console.log("success", data);
+            url: '/CAMBIAR_POR_URL_SERVIDOR', // endpoint url where reside email sending
+            data: {
+              name:    $('#entry_1673767957').val(),
+              email:   $('#entry_522036821').val(),
+              message: $('#entry_1025000276').val()
+            }
           });
+
         }
 
     });
