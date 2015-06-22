@@ -46,11 +46,8 @@ $('document').ready(function(){
           $.ajax({
             type: 'POST',
             url: '/api' // endpoint url where reside email sending
-          }).done(function(data) {
+          }).then(function(data) {
             console.log("success", data);
-          })
-          .erro(function(err){
-            console.error(err);
           });
         }
 
