@@ -59,5 +59,5 @@ function emptyFieldsAndShowMessage() {
   swal('Good job!', 'You clicked the button!', 'success');
 
   var formQueryParams = $(form).serialize();
-  window.location.href = 'http://localhost/dranavarrete/contacto/exito' + formQueryParams;
+  window.location.href = 'http://localhost/dranavarrete/contacto/exito?' + formQueryParams;
 }
