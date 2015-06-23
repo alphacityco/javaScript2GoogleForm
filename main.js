@@ -57,7 +57,7 @@ function emptyFieldsAndShowMessage() {
   var formQueryParams = $(form).serialize();
   window.location.href = 'http://localhost/dranavarrete/contacto/exito?' + formQueryParams;
 
-  $('#entry_1673767957').val('');
-  $('#entry_522036821').val('');
-  $('#entry_1025000276').val('');
+  // $('#entry_1673767957').val('');
+  // $('#entry_522036821').val('');
+  // $('#entry_1025000276').val('');
 }
