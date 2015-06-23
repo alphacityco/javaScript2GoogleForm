@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact with Validation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/jquery.form.js"></script>
+        <!--<script type="text/javascript" src="js/sweetalert.js"></script>-->
+
+        <script type="text/javascript" src="main.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" href="css/sweetalert.css">-->
+    <style type="text/css">
+	body {
+		font-family: "Open Sans",Helvetica,Arial,sans-serif;
+		margin: 0 50px 10px 0;
+		color: #444444;
+	}
+	ul
+	{
+		list-style:none;
+		width:100%;
+		margin: 0;
+		padding: 0;
+	}
+	ul li
+	{
+		padding-top:5px;
+		padding-bottom:5px;
+		margin-bottom:10px;
+		clear:left;
+		position: relative;
+
+	}
+	ul li label
+	{
+		width:70%;
+		display: block;
+		margin-right:2%;
+		text-align:left;
+		line-height:22px;
+	}
+	ul li span.error
+	{
+		font: 13px Helvetica;
+		color:red;
+		margin-left:8px;
+		line-height:22px;
+	}
+	ul li span.passerror
+	{
+		display: block;
+		font: 11px arial;
+		color:red;
+		margin-left:8px;
+		line-height:22px;
+	}
+	ul li .shortfield{
+		width: 45px;
+	}
+	input[type="text"] {
+		width: 300px;
+		height: 30px;
+	}
+	textarea {
+		width: 500px;
+		height: 200px;
+	}
+	
+	#formbox {
+		width: 500px;
+	}
+	input[type=submit] {
+	  padding: 6px 10px;
+	  padding: 0.428571429rem 0.714285714rem;
+	  font-size: 11px;
+	  font-size: 0.785714286rem;
+	  line-height: 1.428571429;
+	  font-weight: normal;
+	  color: #7c7c7c;
+	  background-color: #e6e6e6;
+	  background-repeat: repeat-x;
+	  background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
+	  background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
+	  background-image: -webkit-linear-gradient(top, #f4f4f4, #e6e6e6);
+	  background-image: -o-linear-gradient(top, #f4f4f4, #e6e6e6);
+	  background-image: linear-gradient(top, #f4f4f4, #e6e6e6);
+	  border: 1px solid #d2d2d2;
+	  border-radius: 3px;
+	  box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
+	}
+	.messages-ok {
+		background-image: url("http://localhost/dranavarrete/wp-content/uploads/fa-check-circle-o.png");
+		background-repeat: no-repeat;
+		background-position: 10px;
+		border: 1px solid #01CFCD;
+		padding: 10px 0 10px 40px;
+		color: #444444;
+	}
+    </style>
+    </head>
+    <body>
+       <div id="preview"></div>
+        <div id="formbox">
+            <form name="form" id="form" action="https://docs.google.com/forms/d/1eCieh-ossCZZj1NPxLq0xaF6_17eQuPdH7Ddkk6RZ5c/formResponse" method="post">
+                <ul id="ngothastyle3">
+                    <li class="form-messages"></li>
+                    <li>
+                        <label>Nombre y Apellido</label>
+                        <input type="text" name="entry.168349712" id="entry_168349712" class="" maxlength="40" placeholder="Nombre y apellido" /><span class="minimo"></span>
+            <!-- <input type="text" name="entry.1673767957" value="" class="ss-q-short" id="entry_1673767957" dir="auto" aria-label="Nombre  " title="">-->
+                    </li>
+                    <li>
+                        <label>Email</label>
+                        <input type="text" name="entry.165403943" id="entry_165403943" class="" maxlength="100" placeholder="sunombre@correo.com" /><span class="minimo"></span>
+            <!-- <input type="text" name="entry.522036821" value="" class="ss-q-short" id="entry_522036821" dir="auto" aria-label="correo email " title="">-->
+                    </li>
+					<li>
+                        <label>Teléfono</label>
+                        <input type="text" name="entry.46520476" id="entry_46520476" class="" maxlength="100" placeholder="+ 56 XXX-XXX-XXX" /><span class="minimo"></span>
+            <!-- <input type="text" name="entry.1506073306" value="" class="ss-q-short" id="entry_1506073306" dir="auto" aria-label="Teléfono  " title="">-->
+                    </li>
+                    <li>
+                        <label>Mensaje</label>
+                        <textarea name="entry.1574462297" id="entry_1574462297" rows="5" cols="45" class="" placeholder="Mensaje"></textarea><span class="minimo"></span>
+            <!--<textarea name="entry.1025000276" rows="8" cols="0" class="ss-q-long" id="entry_1025000276" dir="auto" aria-label="mensaje  "></textarea>-->
+                    </li>
+                    <li>
+                        <label>&nbsp;</label>
+                        <input type="submit" name="submit" value="Enviar">
+            <!--<input type="submit" name="submit" value="Enviar" id="ss-submit" class="jfk-button jfk-button-action ">-->
+                    </li>
+                </ul>
+            </form>            
+		</div>		
+    </body>
+</html>

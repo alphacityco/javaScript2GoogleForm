@@ -1,0 +1,73 @@
+// http://stackoverflow.com/questions/28546969/cors-authorization-on-google-sheets-api-requests/29152936#29152936
+window.googleDocCallback = function () { return true; };
+
+$('document').ready(function(){
+
+      $('#form').validate({
+        rules:{
+            "entry.168349712":{
+                required:true,
+                maxlength:40
+            },
+
+            "entry.165403943":{
+                required:true,
+                email:true,
+                maxlength:100
+            },
+			
+			"entry.46520476":{
+                required:true,
+				maxlength:20                
+            },
+
+            "entry.1574462297":{
+                required:true
+            }},
+
+        messages:{
+            "entry.168349712":{
+                required:"*"
+            },
+
+            "entry.165403943":{
+                required:"*",
+                email:"@"
+            },
+			
+			"entry.46520476":{
+                required:"*",
+            },
+			
+            "entry.1574462297":{
+                required:"*"
+            }},
+
+        submitHandler: function(form){
+
+          // cross origin problem cause success callback not execute, so implement the same function in both callbacks
+          $(form).ajaxSubmit({
+            target: '#preview',
+            success: emptyFieldsAndShowMessage,
+            error: emptyFieldsAndShowMessage
+          });
+		  
+
+        }
+
+    });
+
+});
+
+function emptyFieldsAndShowMessage() {
+  $('entry.168349712').val('');
+  $('entry.165403943').val('');
+  $('entry.46520476').val('');
+  $('entry.1574462297').val('');
+  //window.top.location = "http://dev.doctoranavarrete.cl/contacto/exito/";
+  //$( ".form-messages" ).toggleClass( "messages-ok" )
+  //$('.form-messages').html('¡Su mensaje ha sido enviado con éxito!');
+  //$(".form-messages").css("background-color", "#ffffff");
+  // mensaje de exito
+  //swal('Good job!', 'You clicked the button!', 'success');
+}
