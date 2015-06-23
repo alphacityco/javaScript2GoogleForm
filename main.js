@@ -50,14 +50,14 @@ $('document').ready(function(){
 });
 
 function emptyFieldsAndShowMessage() {
-  $('#entry_1673767957').val('');
-  $('#entry_522036821').val('');
-  $('#entry_1025000276').val('');
-
   // mensaje de exito
   // $('.form-messages').html('success!!!!');
   swal('Good job!', 'You clicked the button!', 'success');
 
   var formQueryParams = $(form).serialize();
   window.location.href = 'http://localhost/dranavarrete/contacto/exito?' + formQueryParams;
+
+  $('#entry_1673767957').val('');
+  $('#entry_522036821').val('');
+  $('#entry_1025000276').val('');
 }
