@@ -43,16 +43,6 @@ $('document').ready(function(){
             error: emptyFieldsAndShowMessage
           });
 
-          $.ajax({
-            type: 'POST',
-            url: '/CAMBIAR_POR_URL_SERVIDOR', // endpoint url where reside email sending
-            data: {
-              name:    $('#entry_1673767957').val(),
-              email:   $('#entry_522036821').val(),
-              message: $('#entry_1025000276').val()
-            }
-          });
-
         }
 
     });
@@ -63,7 +53,11 @@ function emptyFieldsAndShowMessage() {
   $('#entry_1673767957').val('');
   $('#entry_522036821').val('');
   $('#entry_1025000276').val('');
-  // $('.form-messages').html('success!!!!');
+
   // mensaje de exito
+  // $('.form-messages').html('success!!!!');
   swal('Good job!', 'You clicked the button!', 'success');
+
+  var formQueryParams = $(form).serialize();
+  window.location.href = 'http://localhost/dranavarrete/contacto/exito' + formQueryParams;
 }
